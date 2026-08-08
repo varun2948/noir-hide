@@ -1,0 +1,146 @@
+@import 'tailwindcss';
+/* Google Fonts are loaded in index.html to avoid CSS @import ordering warnings. */
+
+:root {
+  --espresso: #1b1512;
+  --leather: #5a3828;
+  --oxblood: #651f24;
+  --parchment: #e8ddcb;
+  --bone: #f5f0e8;
+  --brass: #a47a44;
+  --charcoal: #11100f;
+}
+
+@theme {
+  --color-espresso: var(--espresso);
+  --color-leather: var(--leather);
+  --color-oxblood: var(--oxblood);
+  --color-parchment: var(--parchment);
+  --color-bone: var(--bone);
+  --color-brass: var(--brass);
+  --color-charcoal: var(--charcoal);
+
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    font-family: var(--font-sans);
+    color: var(--espresso);
+    background:
+      radial-gradient(ellipse at top, color-mix(in srgb, var(--parchment) 42%, transparent) 0%, transparent 58%),
+      linear-gradient(180deg, var(--bone) 0%, color-mix(in srgb, var(--bone) 96%, #ffffff) 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--espresso);
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--oxblood);
+    color: var(--parchment);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+  }
+
+  button:focus:not(:focus-visible),
+  a:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .font-serif,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .label-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .stitched-border {
+    border: 1px solid color-mix(in srgb, var(--espresso) 12%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, #ffffff 45%, transparent);
+  }
+
+  .noise-overlay {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .noise-overlay::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.018;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+  }
+
+  .emboss-text {
+    color: var(--espresso);
+    text-shadow:
+      0 1px 0 color-mix(in srgb, var(--parchment) 80%, white),
+      0 -1px 0 color-mix(in srgb, var(--espresso) 35%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

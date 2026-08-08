@@ -1,0 +1,48 @@
+# Render Blueprint for NOIR HIDE
+# Deploys the Django REST API (web service) and the React/Vite app (static site).
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  # --- Django REST API -------------------------------------------------------
+  - type: web
+    name: noirhide-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: >-
+      pip install -r requirements.txt &&
+      python manage.py collectstatic --noinput &&
+      python manage.py migrate --noinput &&
+      python manage.py seed_data
+    startCommand: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: CORS_ALLOW_ALL
+        value: "True"
+
+  # --- React / Vite static site ---------------------------------------------
+  - type: web
+    name: noirhide-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: NODE_VERSION
+        value: "22.12.0"
+      # Injects the API service host; the frontend turns this into
+      # https://<host>/api at build time (see src/lib/api.ts).
+      - key: VITE_API_BASE
+        fromService:
+          type: web
+          name: noirhide-api
+          property: host
+    routes:
+      # SPA fallback so client-side routes resolve to index.html.
+      - type: rewrite
+        source: /*
+        destination: /index.html
