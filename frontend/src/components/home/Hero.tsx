@@ -20,6 +20,17 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,color-mix(in_srgb,var(--parchment)_70%,transparent)_0%,transparent_58%),linear-gradient(165deg,var(--bone)_0%,color-mix(in_srgb,var(--parchment)_45%,var(--bone))_100%)]"
       />
 
+      {/* Decorative brand strap — fastened to the left edge, angling up under the header */}
+      <motion.img
+        src="/brand/moci-leather-header.png"
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -left-5 top-3 z-[3] block w-[220px] origin-left drop-shadow-[0_16px_26px_rgba(17,16,15,0.32)] sm:-left-4 sm:top-4 sm:w-[300px] lg:-left-4 lg:top-5 lg:w-[380px] xl:w-[470px]"
+        initial={reduced ? false : { opacity: 0, x: -50, rotate: -26 }}
+        animate={{ opacity: 1, x: 0, rotate: -16 }}
+        transition={{ duration: 0.9, delay: reduced ? 0 : 0.25, ease: [0.22, 1, 0.36, 1] }}
+      />
+
       <div className="relative z-[2] mx-auto grid min-h-[90svh] max-w-[1440px] grid-cols-1 items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:min-h-[100svh] lg:grid-cols-12 lg:gap-6 lg:px-12 lg:pb-20 lg:pt-32">
         {/* Copy column — left / upper on mobile */}
         <div className="relative z-[3] flex flex-col justify-center lg:col-span-5 lg:col-start-1 lg:pr-4 xl:col-span-5">
