@@ -1,5 +1,5 @@
 """
-Seed catalog, materials, journal, and testimonials for NOIR HIDE.
+Seed catalog, materials, journal, and testimonials for Mocchi.
 
 Brand: Crafted by hand. Shaped by time.
 Workshop established 1987 — inspired by artisan Nepal leather makers.
@@ -21,7 +21,7 @@ from shop.models import (
     Testimonial,
 )
 
-# NOIR HIDE brand photography, served from the frontend at /mocchi (relative
+# Mocchi brand photography, served from the frontend at /mocchi (relative
 # paths resolve against the site origin on both local and split deploys).
 # Care accessories keep neutral stock imagery (no brand photo available).
 IMAGES = {
@@ -90,7 +90,7 @@ def _add_colors(product, colors):
 
 
 class Command(BaseCommand):
-    help = 'Seed NOIR HIDE catalog, materials, journal articles, and testimonials.'
+    help = 'Seed Mocchi catalog, materials, journal articles, and testimonials.'
 
     @transaction.atomic
     def handle(self, *args, **options):
@@ -196,7 +196,7 @@ class Command(BaseCommand):
                     'Not hide at all in the conventional sense — a dense, non-porous '
                     'membrane from the horse’s hindquarters, vegetable-tanned and glazed '
                     'to a glass-like polish. Shell Cordovan is scarce, slow, and '
-                    'legendary for its bounce-back and mirror shine. At NOIR HIDE we '
+                    'legendary for its bounce-back and mirror shine. At Mocchi we '
                     'reserve it for small editions where the leather itself is the '
                     'statement: deep burgundy, whisky, and black that catch light like '
                     'lacquered wood.'
@@ -550,7 +550,7 @@ class Command(BaseCommand):
                 'content': (
                     'Full-grain leather keeps the outermost layer of the hide: the densest '
                     'fibers, the natural grain, the healed marks that cheaper leathers '
-                    'sand away. At NOIR HIDE we drum our hides with oils until the surface '
+                    'sand away. At Mocchi we drum our hides with oils until the surface '
                     'moves — the pull-up effect that lightens under stress and settles '
                     'darker with time.\n\n'
                     'In the first weeks, you will notice creases at the ball of the foot '

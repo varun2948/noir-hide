@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { X } from 'lucide-react'
 
-const STORAGE_KEY = 'noir-hide-announcement-dismissed'
+const STORAGE_KEY = 'mocchi-announcement-dismissed'
 
 interface AnnouncementBarProps {
   message?: string

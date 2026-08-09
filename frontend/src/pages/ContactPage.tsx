@@ -26,7 +26,7 @@ export default function ContactPage() {
         <section className="mx-auto max-w-[980px] px-5 py-16 sm:px-8 lg:px-10">
           <SectionLabel>Contact</SectionLabel>
           <h1 className="mt-3 font-display text-[clamp(2.2rem,4.4vw,3.15rem)] leading-[1.02] tracking-[-0.02em] text-espresso">
-            Write to the NOIR HIDE workshop
+            Write to the Mocchi workshop
           </h1>
           <p className="mt-6 max-w-2xl font-serif text-lg italic text-espresso/55">
             Care questions, sizing notes, and repair inquiries. This form is a mock for UX testing.

@@ -113,6 +113,6 @@ export interface NavLink {
 }
 
 export const BRAND = {
-  name: 'NOIR HIDE',
+  name: 'Mocchi',
   tagline: 'Crafted by hand. Shaped by time.',
 } as const

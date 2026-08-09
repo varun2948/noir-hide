@@ -62,7 +62,7 @@ export function BrandPhilosophy() {
               <cite className="not-italic">
                 <span className="block h-px w-16 border-t border-dashed border-brass/55" />
                 <span className="mt-5 block font-sans text-xs uppercase tracking-[0.22em] text-brass">
-                  — The NOIR HIDE Workshop
+                  — The Mocchi Workshop
                 </span>
               </cite>
             </footer>

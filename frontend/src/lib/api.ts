@@ -14,7 +14,7 @@ import type {
 // Resolve the API base URL. Supports:
 //  - unset -> same-origin `/api` (local Vite proxy / same-host deploys)
 //  - full URL (e.g. https://api.example.com/api) -> used as-is
-//  - bare host (e.g. noirhide-api.onrender.com) -> https://<host>/api
+//  - bare host (e.g. mocchi-api.onrender.com) -> https://<host>/api
 //    (Render blueprints can only inject another service's host)
 function resolveApiBase(): string {
   const raw = import.meta.env.VITE_API_BASE as string | undefined

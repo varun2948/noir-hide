@@ -1,10 +1,10 @@
-# Render Blueprint for NOIR HIDE
+# Render Blueprint for Mocchi
 # Deploys the Django REST API (web service) and the React/Vite app (static site).
 # Docs: https://render.com/docs/blueprint-spec
 services:
   # --- Django REST API -------------------------------------------------------
   - type: web
-    name: noirhide-api
+    name: mocchi-api
     runtime: python
     plan: free
     rootDir: backend
@@ -26,7 +26,7 @@ services:
 
   # --- React / Vite static site ---------------------------------------------
   - type: web
-    name: noirhide-web
+    name: mocchi-web
     runtime: static
     rootDir: frontend
     buildCommand: npm ci && npm run build
@@ -39,7 +39,7 @@ services:
       - key: VITE_API_BASE
         fromService:
           type: web
-          name: noirhide-api
+          name: mocchi-api
           property: host
     routes:
       # SPA fallback so client-side routes resolve to index.html.

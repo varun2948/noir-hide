@@ -9,7 +9,7 @@ interface PageStubProps {
 /** Minimal page chrome — content filled by a later pass. */
 export function PageStub({
   title,
-  eyebrow = 'NOIR HIDE',
+  eyebrow = 'Mocchi',
   note = 'Loading section…',
 }: PageStubProps) {
   return (

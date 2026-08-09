@@ -1,4 +1,4 @@
-# NOIR HIDE (Django + React)
+# Mocchi (Django + React)
 
 Luxury leather footwear e-commerce demo inspired by a contemporary workshop + editorial fashion tone.
 
@@ -39,15 +39,15 @@ npm run dev
 
 This repo ships a [`render.yaml`](./render.yaml) that provisions two free services:
 
-- `noirhide-api` — Django REST API (Python web service, runs migrate + seed on build)
-- `noirhide-web` — React/Vite static site (always-on, free)
+- `mocchi-api` — Django REST API (Python web service, runs migrate + seed on build)
+- `mocchi-web` — React/Vite static site (always-on, free)
 
 ### Steps
 1. Push this repo to GitHub (already done if `gh` was used).
 2. Go to [Render](https://dashboard.render.com) → **New** → **Blueprint**.
 3. Connect the GitHub repo — Render reads `render.yaml` and creates both services.
 4. Click **Apply**. First deploy takes a few minutes (backend build seeds the catalog).
-5. Open the `noirhide-web` URL. The frontend auto-targets the API via the injected
+5. Open the `mocchi-web` URL. The frontend auto-targets the API via the injected
    `VITE_API_BASE` host (see `frontend/src/lib/api.ts`).
 
 ### Free-tier caveats

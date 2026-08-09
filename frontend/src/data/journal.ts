@@ -24,7 +24,7 @@ We do not sell “perfect” leather. We sell leather that will outlast the tren
     slug: 'anatomy-of-a-goodyear-welted-shoe',
     title: 'The Anatomy of a Goodyear-Welted Shoe',
     excerpt:
-      'A welt is a strip of leather that joins upper to sole — and the reason a NOIR HIDE boot can be resoled for decades.',
+      'A welt is a strip of leather that joins upper to sole — and the reason a Mocchi boot can be resoled for decades.',
     content: `Goodyear welting stitches a leather strip to the upper and insole, then attaches the outsole to that strip. When the sole wears through, a cobbler can remove it without destroying the upper.
 
 Compare that to cemented construction, where the sole is glued. Once the bond fails or the sole thins, the shoe is often finished.

@@ -10,7 +10,7 @@ import {
 import type { CartItem, Product } from '@/types'
 import { parsePrice } from '@/lib/format'
 
-const STORAGE_KEY = 'noir-hide-cart'
+const STORAGE_KEY = 'mocchi-cart'
 
 interface AddToCartInput {
   product: Product

@@ -1,5 +1,5 @@
 """
-Django settings for NOIR HIDE backend.
+Django settings for Mocchi backend.
 """
 
 import os

@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from 'react'
 
-const FAVORITES_KEY = 'noir-hide-favorites'
+const FAVORITES_KEY = 'mocchi-favorites'
 
 interface UIContextValue {
   isMobileNavOpen: boolean

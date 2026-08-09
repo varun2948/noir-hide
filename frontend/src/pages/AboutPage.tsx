@@ -212,7 +212,7 @@ export default function AboutPage() {
             <figure className="group relative overflow-hidden rounded-[8px] border border-espresso/15">
               <img
                 src={images.lookbookRider}
-                alt="NOIR HIDE wearer with a horse at dusk, in leather boots"
+                alt="Mocchi wearer with a horse at dusk, in leather boots"
                 className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] lg:h-[560px]"
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-transparent to-transparent" />
@@ -228,7 +228,7 @@ export default function AboutPage() {
             <figure className="group relative overflow-hidden rounded-[8px] border border-espresso/15">
               <img
                 src={images.lookbookDrive}
-                alt="NOIR HIDE wearer in tailoring and white leather sneakers"
+                alt="Mocchi wearer in tailoring and white leather sneakers"
                 className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] lg:h-[560px]"
               />
               <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-transparent to-transparent" />

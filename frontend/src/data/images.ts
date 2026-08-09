@@ -1,4 +1,4 @@
-/** NOIR HIDE brand photography, served locally from `/public/mocchi`. */
+/** Mocchi brand photography, served locally from `/public/mocchi`. */
 
 const m = (file: string) => `/mocchi/${file}`
 
