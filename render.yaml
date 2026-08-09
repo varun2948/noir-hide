@@ -12,7 +12,8 @@ services:
       pip install -r requirements.txt &&
       python manage.py collectstatic --noinput &&
       python manage.py migrate --noinput &&
-      python manage.py seed_data
+      python manage.py seed_data &&
+      python manage.py ensure_superuser
     startCommand: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: PYTHON_VERSION
@@ -23,6 +24,14 @@ services:
         value: "False"
       - key: CORS_ALLOW_ALL
         value: "True"
+      - key: DJANGO_SUPERUSER_USERNAME
+        value: admin
+      - key: DJANGO_SUPERUSER_EMAIL
+        value: admin@mocchi.local
+      # Secret: set this in the Render dashboard (Environment tab). Kept out of
+      # git so the password isn't committed to the public repo.
+      - key: DJANGO_SUPERUSER_PASSWORD
+        sync: false
 
   # --- React / Vite static site ---------------------------------------------
   - type: web
