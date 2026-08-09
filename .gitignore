@@ -29,3 +29,6 @@ Thumbs.db
 
 # Misc
 .firecrawl/
+
+# Original high-res source photos (optimized copies live in frontend/public/mocchi)
+Mocchi pics/

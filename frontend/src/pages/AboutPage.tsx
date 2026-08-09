@@ -205,6 +205,44 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <section className="mx-auto max-w-[1440px] px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12 lg:pb-24">
+          <StitchedDivider className="mb-10" label="Lookbook" />
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <figure className="group relative overflow-hidden rounded-[8px] border border-espresso/15">
+              <img
+                src={images.lookbookRider}
+                alt="NOIR HIDE wearer with a horse at dusk, in leather boots"
+                className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] lg:h-[560px]"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-5 left-5 right-5">
+                <p className="label-caps text-[0.65rem] tracking-[0.22em] text-brass">
+                  Field notes
+                </p>
+                <p className="mt-2 font-display text-2xl text-parchment/90">
+                  Made for the long ride
+                </p>
+              </figcaption>
+            </figure>
+            <figure className="group relative overflow-hidden rounded-[8px] border border-espresso/15">
+              <img
+                src={images.lookbookDrive}
+                alt="NOIR HIDE wearer in tailoring and white leather sneakers"
+                className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] lg:h-[560px]"
+              />
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-5 left-5 right-5">
+                <p className="label-caps text-[0.65rem] tracking-[0.22em] text-brass">
+                  City hours
+                </p>
+                <p className="mt-2 font-display text-2xl text-parchment/90">
+                  Tailoring, and quiet leather
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
       </NoiseOverlay>
     </main>
   )

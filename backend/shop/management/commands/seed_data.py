@@ -21,24 +21,26 @@ from shop.models import (
     Testimonial,
 )
 
-# Centralized Unsplash imagery for leather footwear
+# NOIR HIDE brand photography, served from the frontend at /mocchi (relative
+# paths resolve against the site origin on both local and split deploys).
+# Care accessories keep neutral stock imagery (no brand photo available).
 IMAGES = {
-    'oxford_1': 'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=1200&q=80',
-    'boot_1': 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=1200&q=80',
-    'loafer_1': 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&q=80',
-    'sneaker_1': 'https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?w=1200&q=80',
-    'boot_2': 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=80',
-    'oxford_2': 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=1200&q=80',
-    'boot_3': 'https://images.unsplash.com/photo-1612902376491-7a80a99ceef8?w=1200&q=80',
-    'leather_1': 'https://images.unsplash.com/photo-1582897085656-c636d006a867?w=1200&q=80',
-    'care_1': 'https://images.unsplash.com/photo-1582897085656-c636d006a867?w=800&q=80',
-    'texture_fullgrain': 'https://images.unsplash.com/photo-1582897085656-c636d006a867?w=900&q=80',
-    'texture_vegtan': 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=900&q=80',
-    'texture_suede': 'https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?w=900&q=80',
-    'texture_cordovan': 'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=900&q=80',
-    'journal_1': 'https://images.unsplash.com/photo-1582897085656-c636d006a867?w=1400&q=80',
-    'journal_2': 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=1400&q=80',
-    'journal_3': 'https://images.unsplash.com/photo-1612902376491-7a80a99ceef8?w=1400&q=80',
+    'oxford_1': '/mocchi/img-8660.jpg',
+    'boot_1': '/mocchi/newr4.jpg',
+    'loafer_1': '/mocchi/rs-02617.jpg',
+    'sneaker_1': '/mocchi/img-8661.jpg',
+    'boot_2': '/mocchi/newr2.jpg',
+    'oxford_2': '/mocchi/dsc02958.jpg',
+    'boot_3': '/mocchi/rs-00041.jpg',
+    'leather_1': '/mocchi/img-8663.jpg',
+    'care_1': 'https://images.unsplash.com/photo-1620916562816-c0c6f8f3f2f0?w=800&q=80',
+    'texture_fullgrain': '/mocchi/img-8660.jpg',
+    'texture_vegtan': '/mocchi/dsc02847.jpg',
+    'texture_suede': '/mocchi/rs-02641.jpg',
+    'texture_cordovan': '/mocchi/rs-00041.jpg',
+    'journal_1': '/mocchi/newr2.jpg',
+    'journal_2': '/mocchi/img-8663.jpg',
+    'journal_3': '/mocchi/rs-02617.jpg',
 }
 
 DEFAULT_SIZES = ['7', '7.5', '8', '8.5', '9', '9.5', '10', '10.5', '11', '11.5', '12', '13']
@@ -462,7 +464,7 @@ class Command(BaseCommand):
                 'is_featured': False,
                 'featured_order': 0,
                 'collection': 'Care',
-                'images': [IMAGES['leather_1']],
+                'images': [IMAGES['care_1']],
                 'colors': [
                     ('Black', '#0A0A0A', ''),
                     ('Brown', '#4A3728', ''),
@@ -488,7 +490,7 @@ class Command(BaseCommand):
                 'is_featured': False,
                 'featured_order': 0,
                 'collection': 'Care',
-                'images': [IMAGES['care_1'], IMAGES['texture_fullgrain']],
+                'images': [IMAGES['care_1']],
                 'colors': [],
                 'out_of_stock_sizes': None,
             },
